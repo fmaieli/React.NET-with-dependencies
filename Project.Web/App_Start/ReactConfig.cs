@@ -26,13 +26,13 @@ namespace Project.Web
 			//	.SetLoadBabel(false)
 			//	.AddScriptWithoutTransform("~/Scripts/bundle.server.js")
 
-			JsEngineSwitcher.Current.DefaultEngineName = V8JsEngine.EngineName;
-			JsEngineSwitcher.Current.EngineFactories.AddV8();
-
 			ReactSiteConfiguration.Configuration
 			  .SetLoadBabel(true)
 			  .SetLoadReact(true)
 			  .AddScript("~/Scripts/React/dependencies/reactstrap/reactstrap.full.min.js");
+
+			JsEngineSwitcher.Current.DefaultEngineName = V8JsEngine.EngineName;
+			JsEngineSwitcher.Current.EngineFactories.AddV8();		
 		}
 	}
 }

@@ -18,6 +18,20 @@ namespace Project.Web
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
+            // React routes
+
+            routes.MapRoute(
+                name: "Comments",
+                url: "comments",
+                defaults: new { controller = "ReactAppAPI", action = "Comments" }
+            );
+
+            routes.MapRoute(
+                name: "NewComment",
+                url: "comments/new",
+                defaults: new { controller = "ReactAppAPI", action = "AddComment" }
+            );
         }
     }
 }
