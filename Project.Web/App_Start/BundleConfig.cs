@@ -29,26 +29,26 @@ namespace Project.Web
 
             bundles.Add(new BabelBundle("~/bundles/react_development")
                 .Include(
-                    "~/Scripts/React/dependencies/react_development/react.development.js",
-                    "~/Scripts/React/dependencies/react_development/react-dom.development.js",
-                    "~/Scripts/React/dependencies/react_development/remarkable.min.js" // este .js se podria sacar en caso de no usar Remarkable pero es necesario para Tutorial.jsx
+                    "~/Scripts/React/dependencies/react-development/react.development.js",
+                    "~/Scripts/React/dependencies/react-development/react-dom.development.js",
+                    "~/Scripts/React/dependencies/react-development/remarkable.min.js" // este .js se podria sacar en caso de no usar Remarkable pero es necesario para Tutorial.jsx
                 )
             );
 
             bundles.Add(new BabelBundle("~/bundles/react_production")
                 .Include(
-                    "~/Scripts/React/dependencies/react_development/react.development.js",
-                    "~/Scripts/React/dependencies/react_development/react-dom.development.js",
-                    "~/Scripts/React/dependencies/react_development/remarkable.min.js" // este .js se podria sacar en caso de no usar Remarkable pero es necesario para Tutorial.jsx
+                    "~/Scripts/React/dependencies/react-production/react.production.min.js",
+                    "~/Scripts/React/dependencies/react-production/react-dom.production.min.js",
+                    "~/Scripts/React/dependencies/react-production/remarkable.min.js" // este .js se podria sacar en caso de no usar Remarkable pero es necesario para Tutorial.jsx
                 )
             );
 
             bundles.Add(new BabelBundle("~/bundles/react_components")
                 .Include(
                     // Se debe de tener en cuenta los components que dependen de otros en el orden de los scripts
-                    "~/Scripts/React/components/component_with_styled-components/Tutorial_styled-components.jsx",
-                    "~/Scripts/React/components/Tutorial2.jsx",
-                    "~/Scripts/React/components/Tutorial.jsx"
+                    "~/Scripts/React/components/example-component-with-styled-components/StyledComponentsExample.jsx",
+                    "~/Scripts/React/components/example-component1/Example2.jsx",
+                    "~/Scripts/React/components/example-component1/Example1.jsx"
                 )
             );
 
