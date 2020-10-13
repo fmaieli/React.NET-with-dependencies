@@ -47,7 +47,7 @@ namespace Project.Web
                 .Include(
                     // Se debe de tener en cuenta los components que dependen de otros en el orden de los scripts
                     "~/Scripts/React/components/example-component-with-styled-components/StyledComponentsExample.jsx",
-                    "~/Scripts/React/components/example-component1/Example2.jsx",
+                    "~/Scripts/React/components/example-component2/Example2.jsx",
                     "~/Scripts/React/components/example-component1/Example1.jsx"
                 )
             );
