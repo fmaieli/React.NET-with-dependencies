@@ -73,8 +73,8 @@ class Comment extends React.Component {
 
 ReactDOM.render(
     <CommentBox
-        url="/comments"
-        submitUrl="/comments/new"
+        url="/ReactAppAPI/comments"
+        submitUrl="/ReactAppAPI/comments/new"
         pollInterval={2000}
     />,
     document.getElementById('App'),
