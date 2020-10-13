@@ -1,3 +1,5 @@
+using JavaScriptEngineSwitcher.Core;
+using JavaScriptEngineSwitcher.V8;
 using React;
 
 [assembly: WebActivatorEx.PreApplicationStartMethod(typeof(Project.Web.ReactConfig), "Configure")]
@@ -15,7 +17,7 @@ namespace Project.Web
 			//ReactSiteConfiguration.Configuration
 			//	.AddScript("~/Scripts/First.jsx")
 			//	.AddScript("~/Scripts/Second.jsx");
-			
+
 			// If you use an external build too (for example, Babel, Webpack,
 			// Browserify or Gulp), you can improve performance by disabling 
 			// ReactJS.NET's version of Babel and loading the pre-transpiled 
@@ -23,6 +25,14 @@ namespace Project.Web
 			//ReactSiteConfiguration.Configuration
 			//	.SetLoadBabel(false)
 			//	.AddScriptWithoutTransform("~/Scripts/bundle.server.js")
+
+			JsEngineSwitcher.Current.DefaultEngineName = V8JsEngine.EngineName;
+			JsEngineSwitcher.Current.EngineFactories.AddV8();
+
+			ReactSiteConfiguration.Configuration
+			  .SetLoadBabel(true)
+			  .SetLoadReact(true)
+			  .AddScript("~/Scripts/React/dependencies/reactstrap/reactstrap.full.min.js");
 		}
 	}
 }
